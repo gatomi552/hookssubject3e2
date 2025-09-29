@@ -14,8 +14,12 @@ export default function Index() {
       }}>
 
       <Text>Edit app/index.tsx to edit this screen.</Text>
-      <Pressable onPress={(aumentador) => setcontador(contador + 1)} onLongPress={() => setcontador(contador -1)}>
+      <Pressable onPress={(aumentador) => setcontador(contador + 1)} onLongPress={() => setcontador(0)}>
         <Text>contador: {contador}</Text>
+      </Pressable>
+      <Text>----------------------------------------------------------------------------------</Text>
+      <Pressable  onPress={() => setcontador(contador -1)} onLongPress={() => setcontador(0)}>
+        <Text>Resta: {contador}</Text>
       </Pressable>
     </View>
   );
